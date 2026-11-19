@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🎮 REMOTE SHUTTER"
+        android:textColor="@color/accent"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="Searching for a camera phone…"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/camInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/muted"
+        android:textSize="12sp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:background="@drawable/tile_bg">
+
+        <ImageView
+            android:id="@+id/live"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="Live view"
+            android:scaleType="fitCenter" />
+
+        <TextView
+            android:id="@+id/hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="20dp"
+            android:text="📡 Looking for the camera phone…\n\nOn the other phone open Lapit ▸ Be the Camera.\nKeep both phones within ~10 m."
+            android:textColor="@color/muted"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/countdown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:shadowColor="#000000"
+            android:shadowRadius="12"
+            android:textColor="@color/accent"
+            android:textSize="120sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/lastShot"
+            android:layout_width="84dp"
+            android:layout_height="112dp"
+            android:layout_gravity="bottom|start"
+            android:layout_margin="8dp"
+            android:background="@drawable/thumb_bg"
+            android:contentDescription="Last photo"
+            android:padding="2dp"
+            android:scaleType="centerCrop"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnFlip"
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="1"
+            android:text="🔄 Flip" />
+
+        <Button
+            android:id="@+id/btnFlash"
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="1"
+            android:text="⚡ Off" />
+
+        <Button
+            android:id="@+id/btnTimer"
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="1"
+            android:text="⏱ 0s" />
+
+        <Button
+            android:id="@+id/btnStream"
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="👁 Live" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🔍"
+            android:textSize="18sp" />
+
+        <SeekBar
+            android:id="@+id/zoom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:max="100" />
+
+        <Button
+            android:id="@+id/btnLights"
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🌙 Cam screen" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/shutter"
+        android:layout_width="match_parent"
+        android:layout_height="84dp"
+        android:layout_marginTop="6dp"
+        android:text="● SHOOT"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="4dp"
+        android:text="Tip: the volume buttons also take the photo"
+        android:textColor="@color/muted"
+        android:textSize="12sp" />
+</LinearLayout>

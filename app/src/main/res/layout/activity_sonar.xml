@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📡 SONAR"
+            android:textColor="@color/accent"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/findable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Be findable "
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Scanning…"
+        android:textColor="@color/muted"
+        android:textSize="12sp" />
+
+    <com.markdave.lapit.RadarView
+        android:id="@+id/radar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.15" />
+
+    <LinearLayout
+        android:id="@+id/lockPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tile_bg"
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/lockName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lockDist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/accent"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <ProgressBar
+            android:id="@+id/lockBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:max="100" />
+
+        <TextView
+            android:id="@+id/lockTrend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnSave"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:text="⭐ Save" />
+
+            <Button
+                android:id="@+id/btnSound"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:text="🔊 Ping" />
+
+            <Button
+                android:id="@+id/btnUnlock"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="✖ Unlock" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/showAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show unnamed devices too"
+        android:textColor="@color/muted" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.85">
+
+        <LinearLayout
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+</LinearLayout>

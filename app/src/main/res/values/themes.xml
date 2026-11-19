@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Lapit</string>
+
+    <color name="accent">#39FF88</color>
+    <color name="accent_dark">#1F6B45</color>
+    <color name="bg">#000000</color>
+    <color name="panel">#0E1A14</color>
+    <color name="muted">#8FA89A</color>
+    <color name="danger">#FF4D6D</color>
+    <color name="icon_bg">#000000</color>
+
+    <style name="Theme.Lapit" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/accent</item>
+        <item name="colorOnPrimary">#00140A</item>
+        <item name="colorSecondary">@color/accent</item>
+        <item name="colorPrimaryContainer">@color/accent_dark</item>
+        <item name="android:windowBackground">@color/bg</item>
+        <item name="android:statusBarColor">@color/bg</item>
+        <item name="android:navigationBarColor">@color/bg</item>
+    </style>
+</resources>
